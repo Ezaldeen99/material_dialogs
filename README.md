@@ -1,3 +1,6 @@
+# [Flutter Material Dialogs]()
+
+
 [![pub](https://img.shields.io/pub/v/widget_circular_animator.svg)](https://pub.dev/packages/widget_circular_animator/install)
 
 
@@ -77,7 +80,7 @@ Now in your Dart code, you can use:
 import 'package:material_dialogs/material_dialogs.dart';
 ```
 
-Details see [pub.dev](https://pub.dev/packages/widget_circular_animator/install).
+Details see [pub.dev]().
 
 
 
