@@ -49,7 +49,7 @@ This library implements Airbnb's [*Lottie*](https://lottiefiles.com/) library to
 <table style="width:100%">
   <tr>
     <th><b>1. Material Dialog</b></th>
-    <th>2. Bottom Sheet Material Dialog</th>
+    <th><b>2. Bottom Sheet Material Dialog</b></th>
   </tr>
   <tr>
     <td>A normal material dialog which can have one or two buttons.</td>
@@ -212,7 +212,7 @@ for example
 
 # Limitations 
 
-it's better to make you animation have the same background color as your dialog's background color, please use [lottie editor](https://lottiefiles.com/editor) to remove the background layer of your animation or make it same as your dialog background color.
+it's better to make your animation to have the same background color as your dialog's background color, please use [lottie editor](https://lottiefiles.com/editor) to remove the background layer of your animation or make it same as your dialog background color before using it in the plugin.
 
 <a name="contribute"></a>
 ## Contribute
