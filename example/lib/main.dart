@@ -102,6 +102,7 @@ class TestPage extends StatelessWidget {
         msg: 'Congratulations, you won 500 points',
         title: 'Congratulations',
         btn2Text: 'Cancel',
+        singleBtn: true,
         btn2IconColor: Colors.grey,
         btn1Icon: Icons.done,
         btn2Icon: Icons.cancel,

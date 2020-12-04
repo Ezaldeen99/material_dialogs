@@ -5,12 +5,23 @@ import 'package:material_dialogs/widgets/bottom_material_dialog.dart';
 import 'package:material_dialogs/widgets/normal_dialog.dart';
 
 class Dialogs {
+  ///[titleStyle] can be used to change the dialog title style
   static const TextStyle titleStyle =
       const TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
+
+  ///[white] main button default content color
   static const Color white = Colors.white;
+
+  ///[red] accent default value
   static const Color red = Colors.red;
+
+  ///[grey] main text default value
   static const Color grey = Colors.grey;
+
+  ///[bcgColor] background default value
   static const Color bcgColor = const Color(0xfffefefe);
+
+  ///[RoundedRectangleBorder] buttons shape
   static const RoundedRectangleBorder btnShape = const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(4)));
 

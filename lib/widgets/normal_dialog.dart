@@ -2,6 +2,32 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+/// Displays Material dialog above the current contents of the app
+///
+/// [color] dialog background color
+/// [singleBtn] true if you want dialog to have one button only
+/// by default [singleBtn] is false and it will show two buttons
+///
+///
+/// [title] your dialog title
+/// [titleStyle] your dialog title style
+/// [msg] your dialog description message
+/// [msgStyle] your dialog description style
+///
+/// [btnShape] buttons shape
+///
+/// [btn1Text] ok button text
+/// [btn1Press] ok button callback
+/// [btn1Bcg] ok button background color
+/// [btn1Icon] ok button icon
+/// [btn1IconColor] ok button icon color
+///
+/// [btn2Text] cancel button text
+/// [btn2Press] cancel button callback
+/// [btn2Bcg] cancel button background color
+/// [btn2Icon] cancel button icon
+/// [btn2IconColor] cancel button icon color
+///
 class MaterialDialogWidget extends StatelessWidget {
   MaterialDialogWidget({
     @required this.title,
