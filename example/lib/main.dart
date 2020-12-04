@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Material design Dialogs',
         theme: ThemeData(
           textTheme: GoogleFonts.montserratTextTheme(
             Theme.of(context).textTheme,
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           child: Scaffold(
               backgroundColor: Colors.white,
               appBar: AppBar(
-                title: Text("Material design buttons"),
+                title: Text("Material design Dialogs"),
               ),
               body: TestPage()),
         ));
