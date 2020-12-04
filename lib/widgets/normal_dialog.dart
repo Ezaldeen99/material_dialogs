@@ -45,12 +45,13 @@ class MaterialDialogWidget extends StatelessWidget {
         children: [
           animation != null
               ? Container(
-              height: 200,
-              width: double.infinity,
-              child: Lottie.asset(animation, fit: BoxFit.contain))
+                  padding: EdgeInsets.only(top: 16),
+                  height: 200,
+                  width: double.infinity,
+                  child: Lottie.asset(animation, fit: BoxFit.contain))
               : SizedBox(
-            height: 0,
-          ),
+                  height: 0,
+                ),
           Padding(
             padding: const EdgeInsets.only(right: 24, left: 24, top: 24.0),
             child: Text(

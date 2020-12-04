@@ -41,7 +41,7 @@ class BottomMaterialDialog extends StatelessWidget {
         animation != null
             ? Container(
                 height: 200,
-                padding: EdgeInsets.only(top: 8),
+                padding: EdgeInsets.only(top: 16),
                 width: double.infinity,
                 child: Lottie.asset(animation, fit: BoxFit.contain))
             : SizedBox(
