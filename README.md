@@ -56,8 +56,8 @@ This library implements Airbnb's [*Lottie*](https://lottiefiles.com/) library to
     <td>A Bottom Sheet material dialog which can have one or two buttons, is showed from bottom of device.</td> 
   </tr>
   <tr>
-    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173336.png" width="75%"/></td>
-    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173347.png" width="75%"/></td> 
+    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/Screenshot_20201204_173336.png" width="75%"/></td>
+    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/Screenshot_20201204_173347.png" width="75%"/></td> 
   </tr>
 </table>
 
@@ -111,7 +111,7 @@ Dialogs.materialDialog(
 
 ```
  
-<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal.gif" width="300"/>
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/normal.gif" width="300"/>
 
 
 <a name="createBsMaterialDialog"></a>
@@ -135,7 +135,7 @@ Dialogs.bottomMaterialDialog(
 
 ```
 
-<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/bottom.gif" width="300"/>
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/bottom.gif" width="300"/>
 <a name="single_botton_dialogs"></a>
 
 #### iii. Single Botton Dialogs
@@ -159,7 +159,7 @@ Dialogs.materialDialog(
       ),
 ```
 
-<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/single_btn.png" width="300"/>
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/single_btn.png" width="300"/>
 
 <a name="showAnims"></a>
 ### Show Animations
