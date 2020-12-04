@@ -1,4 +1,4 @@
-[![Medium](https://img.shields.io/badge/Android%20Weekly-%23392-2CA3E6.svg?style=flat)](http://androidweekly.net/issues/issue-392)
+[![pub](https://img.shields.io/pub/v/widget_circular_animator.svg)](https://pub.dev/packages/widget_circular_animator/install)
 
 
 # Flutter Material Dialogs  📱
@@ -65,9 +65,21 @@ Implementation of Material Dialog library is so easy. You can check [/example](/
 ### install
 #### i. pubspec
 In `pubspec.yaml`
+
 ```yaml
+dependencies:
+  widget_circular_animator: _latest_version
 
 ```
+Now in your Dart code, you can use:
+
+```dart
+import 'package:material_dialogs/material_dialogs.dart';
+```
+
+Details see [pub.dev](https://pub.dev/packages/widget_circular_animator/install).
+
+
 
 <a name="createDialog"></a>
 ### Create Dialog
