@@ -37,7 +37,7 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
 <a name="introduction"></a>
 ## Introduction
 **MaterialDialog** This Plugin will be useful to create simple, animated, and beautiful dialogs in your next Flutter app. 
-This library implements Airbnb's [*Lottie*](https://github.com/airbnb/lottie-android) library to render After Effects animation in app.
+This library implements Airbnb's [*Lottie*](https://lottiefiles.com/) library to render After Effects animation in app.
 
 <a name="types"></a>
 ## Types of Dialog
