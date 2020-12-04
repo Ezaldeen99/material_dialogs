@@ -124,7 +124,7 @@ class MaterialDialogWidget extends StatelessWidget {
   Widget _firstBtn() {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.only(left: 8),
+        margin: singleBtn == true ? EdgeInsets.zero : EdgeInsets.only(left: 8),
         child: MaterialButton(
           shape: btnShape,
           onPressed: btn1Press,
