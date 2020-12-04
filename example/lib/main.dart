@@ -108,7 +108,7 @@ class TestPage extends StatelessWidget {
         btn2Press: () {
           Navigator.pop(context);
         },
-        animations: 'assets/icon_delete.json',
+        animations: 'assets/cong_example.json',
         context: context,
       ),
       child: Text("Show animations Material Dialog"),
@@ -134,7 +134,7 @@ class TestPage extends StatelessWidget {
         btn2Press: () {
           Navigator.pop(context);
         },
-        animations: 'assets/icon_delete.json',
+        animations: 'assets/cong_example.json',
         context: context,
       ),
       child: Text("Show animations Bottom Dialog"),
