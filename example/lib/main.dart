@@ -99,7 +99,7 @@ class TestPage extends StatelessWidget {
         btn1Text: 'Claim',
         btn1Bcg: Colors.blue,
         color: Colors.white,
-        msg: 'Congratulations',
+        msg: 'Congratulations, you won 500 points',
         title: 'Congratulations',
         btn2Text: 'Cancel',
         btn2IconColor: Colors.grey,
@@ -122,7 +122,7 @@ class TestPage extends StatelessWidget {
       onPressed: () => Dialogs.bottomMaterialDialog(
         btn1Press: () {},
         btn1Text: 'Claim',
-        msg: 'Are you sure? you can\'t undo this',
+        msg: 'Congratulations, you won 500 points',
         title: 'Congratulations',
         btn2Text: 'Cancel',
         btn1Bcg: Colors.blue,
