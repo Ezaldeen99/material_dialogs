@@ -25,10 +25,10 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
 > - [ Introduction ](#introduction)
 > - [ Types of Dialog ](#types)
 > - [ Implementation ](#implementation)
->    - [ Prerequisite ](#prerequisite)
 >    - [ Create Dialog Instance ](#createDialogInstance)
 >        - [ Material Dialog ](#createMaterialDialog)
 >        - [ Bottom Sheet Material Dialog ](#createBsMaterialDialog)
+         - [ Single Botton Dialogs](#single_botton_dialogs)
 >    - [ Show Animations ](#showAnims)
 >        - [ Using `Resource` File ](#showAnimRes)
 >    - [ Dialog State Listeners ](#stateCallbacks)
@@ -96,7 +96,7 @@ Dialogs.materialDialog(
 
 ```
  
-<img align="center" src="GIFs/SimpleMaterialDialog.gif" width="300"/>
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal.gif" width="300"/>
 
 if you want to show a dialog with only one button, please set `singleBtn:true' in your widget. By default it's false, you can read more about it below.
 
@@ -121,7 +121,31 @@ Dialogs.bottomMaterialDialog(
 
 ```
 
-<img align="center" src="GIFs/BottomSheetMaterialDialog.gif" width="300"/>
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/bottom.gif" width="300"/>
+<a name="single_botton_dialogs"></a>
+
+#### iii. Single Botton Dialogs
+
+If you want a single button dialogs, simply add `singleBtn: true` and please keep the `btn2Press` and igonre its callback.
+
+
+```dart 
+Dialogs.materialDialog(
+        btn1Press: () {},
+        btn1Text: 'Claim',
+        btn1Bcg: Colors.blue,
+        color: Colors.white,
+        msg: 'Congratulations, you won 500 points',
+        title: 'Congratulations',
+        singleBtn: true,
+        btn1Icon: Icons.done,
+        btn2Press: () {},
+        animations: 'assets/cong_example.json',
+        context: context,
+      ),
+```
+
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/single_btn.png" width="300"/>
 
 <a name="showAnims"></a>
 ### Show Animations
@@ -133,14 +157,11 @@ For example, here `cong_example.json` animation file is used to show congratulat
 
 <a name="showAnimRes"></a>
 #### i. Using `Resource` File
-Downloaded json file should placed in `raw` directory of `assets`.
-
-![](Screenshots/ScreenAnimRes.PNG)
+Downloaded json file should placed in directory of `assets`. "don't forget to add the `assets` folder to the `pubspec.yaml`
 
 In code, set `animations: 'path to your animation file'` arg in Widget to set Animation to the dialog.
 
-
-Resource file should be passed to method. e.g. `cong_example.json`. 
+Lottie file should be passed to method. e.g. `cong_example.json`. 
 ```dart
 Dialogs.materialDialog(
        btn1Press: () {},
@@ -163,7 +184,7 @@ Dialogs.materialDialog(
 
 <a name="stateCallbacks"></a>
 ### Dialog State Listeners 
-There are three callback events and listeners for Dialog.
+There are two callback events for Dialog.
 
 Following are interfaces for implementations:
 - `btn1Press` - Listens for dialog first button click event.
