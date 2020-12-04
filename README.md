@@ -178,10 +178,6 @@ Dialogs.materialDialog(
 ```
 
 
-# Limitations 
-
-it's better to make you animation have the same background color as your dialog's background color, please use [lottie editor](https://lottiefiles.com/editor) to remove the background layer of your animation or make it same as your dialog background color.
-
 <a name="stateCallbacks"></a>
 ### Dialog State Listeners 
 There are two callback events for Dialog.
@@ -197,6 +193,10 @@ for example
        },
 
 ```
+
+# Limitations 
+
+it's better to make you animation have the same background color as your dialog's background color, please use [lottie editor](https://lottiefiles.com/editor) to remove the background layer of your animation or make it same as your dialog background color.
 
 <a name="contribute"></a>
 ## Contribute
