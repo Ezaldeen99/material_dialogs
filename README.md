@@ -28,7 +28,7 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
 >    - [ Create Dialog Instance ](#createDialogInstance)
 >        - [ Material Dialog ](#createMaterialDialog)
 >        - [ Bottom Sheet Material Dialog ](#createBsMaterialDialog)
-         - [ Single Botton Dialogs](#single_botton_dialogs)
+>        - [ Single Botton Dialogs](#single_botton_dialogs)
 >    - [ Show Animations ](#showAnims)
 >    - [ Dialog State Listeners ](#stateCallbacks)
 > - [ Contribute ](#contribute)    
