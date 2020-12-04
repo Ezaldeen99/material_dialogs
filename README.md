@@ -185,6 +185,9 @@ Let's develop with collaborations. We would love to have contributions by raisin
 ## Credits
 This library is built using following open-source libraries.
 - [Lottie for Flutter](https://pub.dev/packages/lottie)
+- [MaterialDialog-Android](https://github.com/PatilShreyas/MaterialDialog-Android) for inspiration
+
+
 
 ## License
 Project is published under the Apache 2.0 license. Feel free to clone and modify repo as you want, but don't forget to add reference to authors :)
