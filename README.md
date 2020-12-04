@@ -55,7 +55,7 @@ This library implements Airbnb's [*Lottie*](https://github.com/airbnb/lottie-and
   </tr>
   <tr>
     <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173336.png" width="75%"/></td>
-    <td align="center"><img src="Screenshots/BottomSheetMaterialDialog.png" width="75%"/></td> 
+    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173347.png" width="75%"/></td> 
   </tr>
 </table>
 
