@@ -54,7 +54,7 @@ This library implements Airbnb's [*Lottie*](https://github.com/airbnb/lottie-and
     <td>A Bottom Sheet material dialog which can have one or two buttons, is showed from bottom of device.</td> 
   </tr>
   <tr>
-    <td align="center"><img src="Screenshots/MaterialDialog.png" width="75%"/></td>
+    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173336.png" width="75%"/></td>
     <td align="center"><img src="Screenshots/BottomSheetMaterialDialog.png" width="75%"/></td> 
   </tr>
 </table>
