@@ -1,7 +1,7 @@
-# [Flutter Material Dialogs]()
+# [Flutter Material Dialogs](https://pub.dev/packages/material_dialogs)
 
 
-[![pub](https://img.shields.io/pub/v/widget_circular_animator.svg)](https://pub.dev/packages/widget_circular_animator/install)
+[![pub](https://img.shields.io/pub/v/material_dialogs.svg)](https://pub.dev/packages/material_dialogs/install)
 
 
 # Flutter Material Dialogs  📱
@@ -64,6 +64,7 @@ This library implements Airbnb's [*Lottie*](https://lottiefiles.com/) library to
 <a name="implementation"></a>
 ## Implementation
 Implementation of Material Dialog library is so easy. You can check [/example](/example) directory for demo. Let's have look talk in details about it.
+
 <a name="install"></a>
 ### install
 #### i. pubspec
@@ -71,7 +72,7 @@ In `pubspec.yaml`
 
 ```yaml
 dependencies:
-  widget_circular_animator: _latest_version
+  material_dialogs: _latest_version
 
 ```
 Now in your Dart code, you can use:
@@ -80,7 +81,7 @@ Now in your Dart code, you can use:
 import 'package:material_dialogs/material_dialogs.dart';
 ```
 
-Details see [pub.dev]().
+Details see [pub.dev](https://pub.dev/packages/material_dialogs/install).
 
 
 
