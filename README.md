@@ -30,7 +30,6 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
 >        - [ Bottom Sheet Material Dialog ](#createBsMaterialDialog)
          - [ Single Botton Dialogs](#single_botton_dialogs)
 >    - [ Show Animations ](#showAnims)
->        - [ Using `Resource` File ](#showAnimRes)
 >    - [ Dialog State Listeners ](#stateCallbacks)
 > - [ Contribute ](#contribute)    
 > - [ Credits ](#credits)    
@@ -98,7 +97,6 @@ Dialogs.materialDialog(
  
 <img align="center" src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal.gif" width="300"/>
 
-if you want to show a dialog with only one button, please set `singleBtn:true' in your widget. By default it's false, you can read more about it below.
 
 <a name="createBsMaterialDialog"></a>
 #### ii. Bottom Sheet Material Dialog
@@ -150,13 +148,14 @@ Dialogs.materialDialog(
 <a name="showAnims"></a>
 ### Show Animations
 
-Animations in this library are implemented using Lottie animation library. You can get free animations files [here](https://lottiefiles.com/). You can find varieties of animation files on [https://lottiefiles.com](https://lottiefiles.com/).
-`*.json` file downloaded from *LottieFiles* should be placed in android project. There are two ways to place animation file (`*.json`).
+Animations in this library are implemented using Lottie animation library. You can get free animations files [here](https://lottiefiles.com/).
 
-For example, here `cong_example.json` animation file is used to show congratulations animation in the example app.
+`*.json` file downloaded from *LottieFiles* should be placed in flutter project.
+
+For example, here `cong_example.json` animation file is used in the `assets` folder to show congratulations animation in the example app.
 
 <a name="showAnimRes"></a>
-#### i. Using `Resource` File
+
 Downloaded json file should placed in directory of `assets`. "don't forget to add the `assets` folder to the `pubspec.yaml`
 
 In code, set `animations: 'path to your animation file'` arg in Widget to set Animation to the dialog.
@@ -181,6 +180,11 @@ Dialogs.materialDialog(
        context: context,
      )
 ```
+
+
+# Limitations 
+
+it's better to make you animation have the same background color as your dialog's background color, please use [lottie editor](https://lottiefiles.com/editor) to remove the background layer of your animation or make it same as your dialog background color.
 
 <a name="stateCallbacks"></a>
 ### Dialog State Listeners 
