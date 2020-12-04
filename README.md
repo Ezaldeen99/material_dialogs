@@ -154,10 +154,6 @@ Animations in this library are implemented using Lottie animation library. You c
 
 For example, here `cong_example.json` animation file is used in the `assets` folder to show congratulations animation in the example app.
 
-<a name="showAnimRes"></a>
-
-Downloaded json file should placed in directory of `assets`. "don't forget to add the `assets` folder to the `pubspec.yaml`
-
 In code, set `animations: 'path to your animation file'` arg in Widget to set Animation to the dialog.
 
 Lottie file should be passed to method. e.g. `cong_example.json`. 
