@@ -13,10 +13,10 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
     <th>4. Animations Bottom Dialog</th>
   </tr>
   <tr>
-    <td><img src="GIFs/SimpleMaterialDialog.gif"/></td>
-    <td><img src="GIFs/AnimatedMaterialDialog.gif"/></td> 
-    <td><img src="GIFs/BottomSheetMaterialDialog.gif"/></td>
-    <td><img src="GIFs/AnimatedBottomSheetMaterialDialog.gif"/></td>
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal.gif"/></td>
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal_animated.gif"/></td> 
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/bottom.gif"/></td>
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/bottom_animated.gif"/></td>
   </tr>
 </table>
 
