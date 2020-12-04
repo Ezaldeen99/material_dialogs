@@ -16,10 +16,10 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
     <th>4. Animations Bottom Dialog</th>
   </tr>
   <tr>
-    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal.gif"/></td>
-    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/normal_animated.gif"/></td> 
-    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/bottom.gif"/></td>
-    <td><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/bottom_animated.gif"/></td>
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/normal.gif"/></td>
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/normal_animated.gif"/></td> 
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/bottom.gif"/></td>
+    <td><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/bottom_animated.gif"/></td>
   </tr>
 </table>
 
