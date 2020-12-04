@@ -54,8 +54,8 @@ This library implements Airbnb's [*Lottie*](https://github.com/airbnb/lottie-and
     <td>A Bottom Sheet material dialog which can have one or two buttons, is showed from bottom of device.</td> 
   </tr>
   <tr>
-    <td align="center"><img src="Screenshots/MaterialDialog.png" width="75%"/></td>
-    <td align="center"><img src="Screenshots/BottomSheetMaterialDialog.png" width="75%"/></td> 
+    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173336.png" width="75%"/></td>
+    <td align="center"><img src="https://github.com/Ezaldeen99/material_dialogs/blob/master/gifs/Screenshot_20201204_173347.png" width="75%"/></td> 
   </tr>
 </table>
 
@@ -185,6 +185,9 @@ Let's develop with collaborations. We would love to have contributions by raisin
 ## Credits
 This library is built using following open-source libraries.
 - [Lottie for Flutter](https://pub.dev/packages/lottie)
+- [MaterialDialog-Android](https://github.com/PatilShreyas/MaterialDialog-Android) for inspiration
+
+
 
 ## License
 Project is published under the Apache 2.0 license. Feel free to clone and modify repo as you want, but don't forget to add reference to authors :)
