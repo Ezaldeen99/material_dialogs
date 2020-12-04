@@ -1,8 +1,7 @@
 name: material_dialogs
-description: A new Flutter package.
+description: A Flutter package aims to help you create animated, simple, stylish Material Dialogs in your app.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/Ezaldeen99/material_dialogs
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -13,6 +12,7 @@ dependencies:
     sdk: flutter
   # animations
   lottie: ^0.7.0+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
