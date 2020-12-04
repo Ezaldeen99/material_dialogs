@@ -11,9 +11,9 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
 <table style="width:100%">
   <tr>
     <th><b>1. Material Dialog</b></th>
-    <th>2. Animations Material Dialog</th> 
-    <th>3. Bottom Material Dialog</th>
-    <th>4. Animations Bottom Dialog</th>
+    <th><b>2. Animations Material Dialog</b></th> 
+    <th><b>3. Bottom Material Dialog</b></th>
+    <th><b>4. Animations Bottom Dialog</b></th>
   </tr>
   <tr>
     <td><img src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/normal.gif"/></td>
