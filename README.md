@@ -31,9 +31,8 @@ A Flutter library aims to help you create 💪🏻*animated*, 😃 *simple*, �
 >    - [ Create Dialog Instance ](#createDialogInstance)
 >        - [ Material Dialog ](#createMaterialDialog)
 >        - [ Bottom Sheet Material Dialog ](#createBsMaterialDialog)
->        - [ Single Botton Dialogs](#single_botton_dialogs)
 >    - [ Show Animations ](#showAnims)
->    - [ Dialog State Listeners ](#stateCallbacks)
+>    - [Icon Buttons](#icons_buttons)
 > - [ Contribute ](#contribute)    
 > - [ Credits ](#credits)    
 
@@ -93,73 +92,62 @@ As there are two types of dialogs in library. Material Dialogs are instantiated 
 `Dialogs` class will be used to create your dialog, below is an example to show your dialog in the app.
 
 ```dart
-
 Dialogs.materialDialog(
-        btn1Press: () {},
-        btn1Text: "Delete",
-        msg: 'Are you sure? you can\'t undo this',
-        title: "Delete",
-        btn2Text: "Cancel",
-        btn2Press: () {
-          Navigator.pop(context);
-        },
-        color: Colors.white,
-        btn1Icon: Icons.delete,
-        btn2Icon: Icons.cancel,
-        context: context,
-      )
-
+          msg: 'Are you sure ? you can\'t undo this',
+          title: "Delete",
+          color: Colors.white,
+          context: context,
+          actions: [
+            IconsOutlineButton(
+              onPressed: () {},
+              text: 'Cancel',
+              iconData: Icons.cancel_outlined,
+              textStyle: TextStyle(color: Colors.grey),
+              iconColor: Colors.grey,
+            ),
+            IconsButton(
+              onPressed: () {},
+              text: 'Delete',
+              iconData: Icons.delete,
+              color: Colors.red,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ])
 ```
  
 <img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/normal.gif" width="300"/>
 
+`IconsOutlineButton` and `IconsButton` are both buttons widgets provided by the plugin to make things easier for you [read more](#icons_buttons), you can use any other buttons if you want.
 
 <a name="createBsMaterialDialog"></a>
 #### ii. Bottom Sheet Material Dialog
 `Dialogs` class will be used to create your dialog, use `bottomMaterialDialog`. Below is an example to show your dialog in the app.
 ```dart
-
 Dialogs.bottomMaterialDialog(
-        btn1Press: () {},
-        btn1Text: 'Delete',
-        msg: 'Are you sure? you can\'t undo this',
-        title: 'Delete',
-        btn2Text: 'Cancel',
-        btn2Press: () {
-          Navigator.pop(context);
-        },
-        btn1Icon: Icons.delete,
-        btn2Icon: Icons.cancel,
-        context: context,
-      )
-
+          msg: 'Are you sure? you can\'t undo this action',
+          title: 'Delete',
+          context: context,
+          actions: [
+            IconsOutlineButton(
+              onPressed: () {},
+              text: 'Cancel',
+              iconData: Icons.cancel_outlined,
+              textStyle: TextStyle(color: Colors.grey),
+              iconColor: Colors.grey,
+            ),
+            IconsButton(
+              onPressed: () {},
+              text: 'Delete',
+              iconData: Icons.delete,
+              color: Colors.red,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ]),
 ```
 
 <img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/bottom.gif" width="300"/>
-<a name="single_botton_dialogs"></a>
-
-#### iii. Single Botton Dialogs
-
-If you want a single button dialogs, simply add `singleBtn: true` and please keep the `btn2Press` and igonre its callback.
-
-
-```dart 
-Dialogs.materialDialog(
-        btn1Press: () {},
-        btn1Text: 'Claim',
-        btn1Bcg: Colors.blue,
-        color: Colors.white,
-        msg: 'Congratulations, you won 500 points',
-        title: 'Congratulations',
-        singleBtn: true,
-        btn1Icon: Icons.done,
-        btn2Press: () {},
-        animations: 'assets/cong_example.json',
-        context: context,
-      ),
-```
-
-<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/single_btn.png" width="300"/>
 
 <a name="showAnims"></a>
 ### Show Animations
@@ -194,21 +182,38 @@ Dialogs.materialDialog(
 ```
 
 
-<a name="stateCallbacks"></a>
-### Dialog State Listeners 
-There are two callback events for Dialog.
+<a name="icons_buttons"></a>
+#### iii. Icons buttons
 
-Following are interfaces for implementations:
-- `btn1Press` - Listens for dialog first button click event.
-- `btn2Press` - Listens for dialog second button click event.
+The plugin provide you some widget to help you create icon buttons easily 
+# IconsOutlineButton
 
-for example 
-```dart
- btn2Press: () {
-         Navigator.pop(context);
-       },
+This widget helps you create an outline button easily
 
+```dart 
+    IconsOutlineButton(
+      onPressed: () {},
+      text: 'Cancel',
+      iconData: Icons.cancel_outlined,
+      textStyle: TextStyle(color: Colors.grey),
+      iconColor: Colors.grey,
+    ),
 ```
+# IconsButton
+
+This widget helps you create a material button with icons in few lines of code
+
+```dart 
+    IconsButton(
+      onPressed: () {},
+      text: 'Delete',
+      iconData: Icons.delete,
+      color: Colors.red,
+      textStyle: TextStyle(color: Colors.white),
+      iconColor: Colors.white,
+    ),
+```
+<img align="center" src="https://github.com/Ezaldeen99/material_dialogs/raw/master/gifs/single_btn.png" width="300"/>
 
 # Limitations 
 
