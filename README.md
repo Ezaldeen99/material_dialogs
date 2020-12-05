@@ -162,22 +162,21 @@ In code, set `animations: 'path to your animation file'` arg in Widget to set An
 Lottie file should be passed to method. e.g. `cong_example.json`. 
 ```dart
 Dialogs.materialDialog(
-       btn1Press: () {},
-       btn1Text: 'Claim',
-       btn1Bcg: Colors.blue,
-       color: Colors.white,
-       msg: 'Congratulations, you won 500 points',
-       title: 'Congratulations',
-       btn2Text: 'Cancel',
-       btn2IconColor: Colors.grey,
-       btn1Icon: Icons.done,
-       btn2Icon: Icons.cancel,
-       btn2Press: () {
-         Navigator.pop(context);
-       },
-       animations: 'assets/cong_example.json',
-       context: context,
-     )
+          color: Colors.white,
+          msg: 'Congratulations, you won 500 points',
+          title: 'Congratulations',
+          animations: 'assets/cong_example.json',
+          context: context,
+          actions: [
+            IconsButton(
+              onPressed: () {},
+              text: 'Claim',
+              iconData: Icons.done,
+              color: Colors.blue,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ]),
 ```
 
 
