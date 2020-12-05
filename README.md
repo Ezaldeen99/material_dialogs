@@ -159,7 +159,6 @@ For example, here `cong_example.json` animation file is used in the `assets` fol
 
 In code, set `animations: 'path to your animation file'` arg in Widget to set Animation to the dialog.
 
-Lottie file should be passed to method. e.g. `cong_example.json`. 
 ```dart
 Dialogs.materialDialog(
           color: Colors.white,
