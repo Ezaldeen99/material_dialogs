@@ -1,3 +1,6 @@
+
+## [0.0.3+1] - edit examples
+
 ## [0.0.3] - breakout changes
 
 - use actions widgets list to add buttons.
