@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_dialogs/material_dialogs.dart';
+import 'package:material_dialogs/widgets/buttons/icon_button.dart';
+import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 
 void main() {
   runApp(MyApp());
@@ -52,19 +54,27 @@ class TestPage extends StatelessWidget {
       color: Colors.grey[300],
       minWidth: 300,
       onPressed: () => Dialogs.materialDialog(
-        btn1Press: () {},
-        btn1Text: "Delete",
-        msg: 'Are you sure? you can\'t undo this',
-        title: "Delete",
-        btn2Text: "Cancel",
-        btn2Press: () {
-          Navigator.pop(context);
-        },
-        color: Colors.white,
-        btn1Icon: Icons.delete,
-        btn2Icon: Icons.cancel,
-        context: context,
-      ),
+          msg: 'Are you sure ? you can\'t undo this',
+          title: "Delete",
+          color: Colors.white,
+          context: context,
+          actions: [
+            IconsOutlineButton(
+              onPressed: () {},
+              text: 'Cancel',
+              iconData: Icons.cancel_outlined,
+              textStyle: TextStyle(color: Colors.grey),
+              iconColor: Colors.grey,
+            ),
+            IconsButton(
+              onPressed: () {},
+              text: 'Delete',
+              iconData: Icons.delete,
+              color: Colors.red,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ]),
       child: Text("Show Material Dialog"),
     );
   }
@@ -74,18 +84,26 @@ class TestPage extends StatelessWidget {
       minWidth: 300,
       color: Colors.grey[300],
       onPressed: () => Dialogs.bottomMaterialDialog(
-        btn1Press: () {},
-        btn1Text: 'Delete',
-        msg: 'Are you sure? you can\'t undo this',
-        title: 'Delete',
-        btn2Text: 'Cancel',
-        btn2Press: () {
-          Navigator.pop(context);
-        },
-        btn1Icon: Icons.delete,
-        btn2Icon: Icons.cancel,
-        context: context,
-      ),
+          msg: 'Are you sure? you can\'t undo this action',
+          title: 'Delete',
+          context: context,
+          actions: [
+            IconsOutlineButton(
+              onPressed: () {},
+              text: 'Cancel',
+              iconData: Icons.cancel_outlined,
+              textStyle: TextStyle(color: Colors.grey),
+              iconColor: Colors.grey,
+            ),
+            IconsButton(
+              onPressed: () {},
+              text: 'Delete',
+              iconData: Icons.delete,
+              color: Colors.red,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ]),
       child: Text("Show Bottom Material Dialog"),
     );
   }
@@ -95,23 +113,21 @@ class TestPage extends StatelessWidget {
       minWidth: 300,
       color: Colors.grey[300],
       onPressed: () => Dialogs.materialDialog(
-        btn1Press: () {},
-        btn1Text: 'Claim',
-        btn1Bcg: Colors.blue,
-        color: Colors.white,
-        msg: 'Congratulations, you won 500 points',
-        title: 'Congratulations',
-        btn2Text: 'Cancel',
-        singleBtn: true,
-        btn2IconColor: Colors.grey,
-        btn1Icon: Icons.done,
-        btn2Icon: Icons.cancel,
-        btn2Press: () {
-          Navigator.pop(context);
-        },
-        animations: 'assets/cong_example.json',
-        context: context,
-      ),
+          color: Colors.white,
+          msg: 'Congratulations, you won 500 points',
+          title: 'Congratulations',
+          animations: 'assets/cong_example.json',
+          context: context,
+          actions: [
+            IconsButton(
+              onPressed: () {},
+              text: 'Claim',
+              iconData: Icons.done,
+              color: Colors.blue,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ]),
       child: Text("Show animations Material Dialog"),
     );
   }
@@ -121,23 +137,21 @@ class TestPage extends StatelessWidget {
       color: Colors.grey[300],
       minWidth: 300,
       onPressed: () => Dialogs.bottomMaterialDialog(
-        btn1Press: () {},
-        btn1Text: 'Claim',
-        msg: 'Congratulations, you won 500 points',
-        title: 'Congratulations',
-        btn2Text: 'Cancel',
-        btn1Bcg: Colors.blue,
-        btn2Bcg: Colors.white,
-        btn2IconColor: Colors.grey,
-        btn1Icon: Icons.done,
-        btn2Icon: Icons.cancel,
-        color: Colors.white,
-        btn2Press: () {
-          Navigator.pop(context);
-        },
-        animations: 'assets/cong_example.json',
-        context: context,
-      ),
+          msg: 'Congratulations, you won 500 points',
+          title: 'Congratulations',
+          color: Colors.white,
+          animations: 'assets/cong_example.json',
+          context: context,
+          actions: [
+            IconsButton(
+              onPressed: () {},
+              text: 'Claim',
+              iconData: Icons.done,
+              color: Colors.blue,
+              textStyle: TextStyle(color: Colors.white),
+              iconColor: Colors.white,
+            ),
+          ]),
       child: Text("Show animations Bottom Dialog"),
     );
   }
