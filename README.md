@@ -1,6 +1,5 @@
 # [Flutter Material Dialogs](https://pub.dev/packages/material_dialogs)
 
-
 [![pub](https://img.shields.io/pub/v/material_dialogs.svg)](https://pub.dev/packages/material_dialogs/install)
 
 
@@ -183,10 +182,10 @@ Dialogs.materialDialog(
 
 
 <a name="icons_buttons"></a>
-#### iii. Icons buttons
+## iii. Icons buttons
 
-The plugin provide you some widget to help you create icon buttons easily 
-# IconsOutlineButton
+The plugin provide you some out of the box customized buttons to help you creating your dialog.
+#### IconsOutlineButton
 
 This widget helps you create an outline button easily
 
@@ -199,7 +198,7 @@ This widget helps you create an outline button easily
       iconColor: Colors.grey,
     ),
 ```
-# IconsButton
+#### IconsButton
 
 This widget helps you create a material button with icons in few lines of code
 
