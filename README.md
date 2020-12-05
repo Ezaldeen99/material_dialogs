@@ -182,7 +182,7 @@ Dialogs.materialDialog(
 
 
 <a name="icons_buttons"></a>
-## iii. Icons buttons
+## Icons buttons
 
 The plugin provide you some out of the box customized buttons to help you creating your dialog.
 #### IconsOutlineButton
