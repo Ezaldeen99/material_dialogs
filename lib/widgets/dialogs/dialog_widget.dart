@@ -66,7 +66,7 @@ class DialogWidget extends StatelessWidget {
           ),
         ),
         actions != null && actions.isNotEmpty
-            ? buttons()
+            ? buttons(context)
             : SizedBox(
                 height: 24,
               )
@@ -74,17 +74,23 @@ class DialogWidget extends StatelessWidget {
     );
   }
 
-  Widget buttons() {
+  Widget buttons(BuildContext context) {
     return Padding(
       padding:
           const EdgeInsets.only(right: 24, left: 24, top: 16.0, bottom: 24.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(actions.length, (index) {
-          double endPadding = index != 0 ? 4 : 0;
+          final TextDirection direction = Directionality.of(context);
+          double padding = index != 0 ? 8 : 0;
+          double rightPadding = 0;
+          double leftPadding = 0;
+          direction == TextDirection.rtl
+              ? rightPadding = padding
+              : leftPadding = padding;
           return Expanded(
             child: Padding(
-              padding: EdgeInsets.only(left: endPadding, right: endPadding),
+              padding: EdgeInsets.only(left: leftPadding, right: rightPadding),
               child: actions[index],
             ),
           );
