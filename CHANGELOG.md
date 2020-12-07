@@ -1,4 +1,6 @@
 
+## [0.0.4] - adding RTL layouts support
+
 ## [0.0.3+1] - edit examples
 
 ## [0.0.3] - breakout changes
