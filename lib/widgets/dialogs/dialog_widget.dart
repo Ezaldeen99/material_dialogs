@@ -81,10 +81,10 @@ class DialogWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(actions.length, (index) {
-          double endPadding = index != 0 ? 8 : 0;
+          double endPadding = index != 0 ? 4 : 0;
           return Expanded(
             child: Padding(
-              padding: EdgeInsets.only(left: endPadding),
+              padding: EdgeInsets.only(left: endPadding, right: endPadding),
               child: actions[index],
             ),
           );
