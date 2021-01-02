@@ -43,8 +43,6 @@ class Dialogs {
     Color color = bcgColor,
   }) async {
     assert(context != null);
-    assert(title != null);
-    assert(msg != null);
 
     await showDialog<String>(
         context: context,
@@ -77,8 +75,6 @@ class Dialogs {
     Color color = bcgColor,
   }) {
     assert(context != null);
-    assert(title != null);
-    assert(msg != null);
 
     showModalBottomSheet(
         context: context,

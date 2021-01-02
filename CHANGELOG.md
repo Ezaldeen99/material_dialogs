@@ -1,3 +1,7 @@
+## [0.0.5]
+- allow only description dialogs
+- allow only titles dialogs
+- allow only buttons dialogs
 
 ## [0.0.4] - adding RTL layouts support
 

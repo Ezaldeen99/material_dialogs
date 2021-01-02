@@ -6,8 +6,8 @@ import 'package:lottie/lottie.dart';
 
 class DialogWidget extends StatelessWidget {
   DialogWidget({
-    @required this.title,
-    @required this.msg,
+    this.title,
+    this.msg,
     this.actions,
     this.animation,
     this.titleStyle,
@@ -44,31 +44,39 @@ class DialogWidget extends StatelessWidget {
       children: [
         animation != null
             ? Container(
-                padding: EdgeInsets.only(top: 16),
+                padding: EdgeInsets.only(top: 20),
                 height: 200,
                 width: double.infinity,
                 child: Lottie.asset(animation, fit: BoxFit.contain))
             : SizedBox(
                 height: 0,
               ),
-        Padding(
-          padding: const EdgeInsets.only(right: 24, left: 24, top: 24.0),
-          child: Text(
-            title,
-            style: titleStyle,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 24, left: 24, top: 16.0),
-          child: Text(
-            msg,
-            style: msgStyle,
-          ),
-        ),
+        title != null
+            ? Padding(
+                padding: const EdgeInsets.only(right: 20, left: 20, top: 24.0),
+                child: Text(
+                  title,
+                  style: titleStyle,
+                ),
+              )
+            : SizedBox(
+                height: 20,
+              ),
+        msg != null
+            ? Padding(
+                padding: const EdgeInsets.only(right: 20, left: 20, top: 16.0),
+                child: Text(
+                  msg,
+                  style: msgStyle,
+                ),
+              )
+            : SizedBox(
+                height: 20,
+              ),
         actions != null && actions.isNotEmpty
             ? buttons(context)
             : SizedBox(
-                height: 24,
+                height: 20,
               )
       ],
     );
@@ -77,7 +85,7 @@ class DialogWidget extends StatelessWidget {
   Widget buttons(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsets.only(right: 24, left: 24, top: 16.0, bottom: 24.0),
+          const EdgeInsets.only(right: 20, left: 20, top: 16.0, bottom: 20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(actions.length, (index) {
