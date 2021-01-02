@@ -1,3 +1,6 @@
+## [0.0.6]
+-mark title and msg variables as not required
+
 ## [0.0.5]
 - allow only description dialogs
 - allow only titles dialogs

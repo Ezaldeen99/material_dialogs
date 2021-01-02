@@ -33,8 +33,8 @@ class Dialogs {
 
   static Future<void> materialDialog({
     @required BuildContext context,
-    @required String title,
-    @required String msg,
+    String title,
+    String msg,
     List<Widget> actions,
     String animations,
     ShapeBorder dialogShape = dialogShape,
@@ -65,8 +65,8 @@ class Dialogs {
   /// Displays bottom sheet Material dialog above the current contents of the app
   static void bottomMaterialDialog({
     @required BuildContext context,
-    @required String title,
-    @required String msg,
+    String title,
+    String msg,
     List<Widget> actions,
     String animations,
     ShapeBorder dialogShape = BottomSheetShape,
