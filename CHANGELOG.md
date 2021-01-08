@@ -1,3 +1,7 @@
+## [0.0.6+1]
+-allow custom padding on both IconsButton and OutlinedIconsButton
+
+
 ## [0.0.6]
 -mark title and msg variables as not required
 

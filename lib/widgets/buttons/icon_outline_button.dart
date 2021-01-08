@@ -7,6 +7,7 @@ class IconsOutlineButton extends StatelessWidget {
     this.shape,
     this.color,
     this.iconData,
+    this.padding = const EdgeInsets.all(4),
     this.iconColor,
     this.textStyle,
   })  : assert(onPressed != null),
@@ -33,12 +34,16 @@ class IconsOutlineButton extends StatelessWidget {
   /// [textStyle] Defines the button's base text style
   final TextStyle textStyle;
 
+  /// [padding] Defines the button's padding
+  final EdgeInsets padding;
+
   @override
   Widget build(BuildContext context) {
     return OutlineButton(
       onPressed: onPressed,
       shape: shape,
       color: color,
+      padding: padding,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
