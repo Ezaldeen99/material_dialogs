@@ -157,14 +157,14 @@ Animations in this library are implemented using Lottie animation library. You c
 
 For example, here `cong_example.json` animation file is used in the `assets` folder to show congratulations animation in the example app.
 
-In code, set `animations: 'path to your animation file'` arg in Widget to set Animation to the dialog.
+In code, set `animation: 'path to your animation file'` arg in Widget to set Animation to the dialog.
 
 ```dart
 Dialogs.materialDialog(
           color: Colors.white,
           msg: 'Congratulations, you won 500 points',
           title: 'Congratulations',
-          animations: 'assets/cong_example.json',
+          animation: 'assets/cong_example.json',
           context: context,
           actions: [
             IconsButton(

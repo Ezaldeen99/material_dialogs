@@ -30,7 +30,13 @@ class Dialogs {
   /// [msg] your dialog description message
   /// [msgStyle] your dialog description style
 
-  /// [actions]Widgets to display a row of buttons after the [msg] widget.
+  /// [actions] Widgets to display a row of buttons after the [msg] widget.
+
+  /// [animation] JSON Lottie animation file
+  /// [animationFrameRate] framerate of animation
+  /// [animationRepeat] should the animation repeat?
+  /// [animationAnimate] should the animation animate?
+  /// [animationReverse] should the animation be reversed?
 
   static Future<void> materialDialog({
     @required BuildContext context,
