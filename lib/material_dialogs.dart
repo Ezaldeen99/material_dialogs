@@ -1,6 +1,7 @@
 library material_dialogs;
 
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:material_dialogs/widgets/dialogs/dialog_widget.dart';
 
 class Dialogs {
@@ -29,14 +30,24 @@ class Dialogs {
   /// [msg] your dialog description message
   /// [msgStyle] your dialog description style
 
-  /// [actions]Widgets to display a row of buttons after the [msg] widget.
+  /// [actions] Widgets to display a row of buttons after the [msg] widget.
+
+  /// [animation] JSON Lottie animation file
+  /// [animationFrameRate] framerate of animation
+  /// [animationRepeat] should the animation repeat?
+  /// [animationAnimate] should the animation animate?
+  /// [animationReverse] should the animation be reversed?
 
   static Future<void> materialDialog({
     @required BuildContext context,
     String title,
     String msg,
     List<Widget> actions,
-    String animations,
+    String animation,
+    double animationFrameRate,
+    bool animationRepeat,
+    bool animationAnimate,
+    bool animationReverse,
     ShapeBorder dialogShape = dialogShape,
     TextStyle titleStyle = titleStyle,
     TextStyle msgStyle,
@@ -45,21 +56,27 @@ class Dialogs {
     assert(context != null);
 
     await showDialog<String>(
-        context: context,
-        builder: (_) {
-          return Dialog(
-              backgroundColor: color,
-              shape: dialogShape,
-              child: DialogWidget(
-                title: title,
-                msg: msg,
-                actions: actions,
-                animation: animations,
-                titleStyle: titleStyle,
-                msgStyle: msgStyle,
-                color: color,
-              ));
-        });
+      context: context,
+      builder: (_) {
+        return Dialog(
+          backgroundColor: color,
+          shape: dialogShape,
+          child: DialogWidget(
+            title: title,
+            msg: msg,
+            actions: actions,
+            animation: animation,
+            animationFrameRate: FrameRate(animationFrameRate),
+            animationRepeat: animationRepeat,
+            animationAnimate: animationAnimate,
+            animationReverse: animationReverse,
+            titleStyle: titleStyle,
+            msgStyle: msgStyle,
+            color: color,
+          ),
+        );
+      },
+    );
   }
 
   /// Displays bottom sheet Material dialog above the current contents of the app
@@ -68,7 +85,11 @@ class Dialogs {
     String title,
     String msg,
     List<Widget> actions,
-    String animations,
+    String animation,
+    double animationFrameRate,
+    bool animationRepeat,
+    bool animationAnimate,
+    bool animationReverse,
     ShapeBorder dialogShape = BottomSheetShape,
     TextStyle titleStyle = titleStyle,
     TextStyle msgStyle,
@@ -77,17 +98,22 @@ class Dialogs {
     assert(context != null);
 
     showModalBottomSheet(
-        context: context,
-        shape: dialogShape,
-        backgroundColor: color,
-        builder: (context) => DialogWidget(
-              title: title,
-              msg: msg,
-              actions: actions,
-              animation: animations,
-              titleStyle: titleStyle,
-              msgStyle: msgStyle,
-              color: color,
-            ));
+      context: context,
+      shape: dialogShape,
+      backgroundColor: color,
+      builder: (context) => DialogWidget(
+        title: title,
+        msg: msg,
+        actions: actions,
+        animation: animation,
+        animationFrameRate: FrameRate(animationFrameRate),
+        animationRepeat: animationRepeat,
+        animationAnimate: animationAnimate,
+        animationReverse: animationReverse,
+        titleStyle: titleStyle,
+        msgStyle: msgStyle,
+        color: color,
+      ),
+    );
   }
 }

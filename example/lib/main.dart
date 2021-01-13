@@ -113,21 +113,22 @@ class TestPage extends StatelessWidget {
       minWidth: 300,
       color: Colors.grey[300],
       onPressed: () => Dialogs.materialDialog(
-          color: Colors.white,
-          msg: 'Congratulations, you won 500 points',
-          title: 'Congratulations',
-          animations: 'assets/cong_example.json',
-          context: context,
-          actions: [
-            IconsButton(
-              onPressed: () {},
-              text: 'Claim',
-              iconData: Icons.done,
-              color: Colors.blue,
-              textStyle: TextStyle(color: Colors.white),
-              iconColor: Colors.white,
-            ),
-          ]),
+        color: Colors.white,
+        msg: 'Congratulations, you won 500 points',
+        title: 'Congratulations',
+        animation: 'assets/cong_example.json',
+        context: context,
+        actions: [
+          IconsButton(
+            onPressed: () {},
+            text: 'Claim',
+            iconData: Icons.done,
+            color: Colors.blue,
+            textStyle: TextStyle(color: Colors.white),
+            iconColor: Colors.white,
+          ),
+        ],
+      ),
       child: Text("Show animations Material Dialog"),
     );
   }
@@ -137,21 +138,22 @@ class TestPage extends StatelessWidget {
       color: Colors.grey[300],
       minWidth: 300,
       onPressed: () => Dialogs.bottomMaterialDialog(
-          msg: 'Congratulations, you won 500 points',
-          title: 'Congratulations',
-          color: Colors.white,
-          animations: 'assets/cong_example.json',
-          context: context,
-          actions: [
-            IconsButton(
-              onPressed: () {},
-              text: 'Claim',
-              iconData: Icons.done,
-              color: Colors.blue,
-              textStyle: TextStyle(color: Colors.white),
-              iconColor: Colors.white,
-            ),
-          ]),
+        msg: 'Congratulations, you won 500 points',
+        title: 'Congratulations',
+        color: Colors.white,
+        animation: 'assets/cong_example.json',
+        context: context,
+        actions: [
+          IconsButton(
+            onPressed: () {},
+            text: 'Claim',
+            iconData: Icons.done,
+            color: Colors.blue,
+            textStyle: TextStyle(color: Colors.white),
+            iconColor: Colors.white,
+          ),
+        ],
+      ),
       child: Text("Show animations Bottom Dialog"),
     );
   }
