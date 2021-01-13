@@ -10,6 +10,10 @@ class DialogWidget extends StatelessWidget {
     this.msg,
     this.actions,
     this.animation,
+    this.animationFrameRate,
+    this.animationRepeat,
+    this.animationAnimate,
+    this.animationReverse,
     this.titleStyle,
     this.msgStyle,
     this.color,
@@ -26,6 +30,18 @@ class DialogWidget extends StatelessWidget {
 
   /// [animation] lottie animations path
   final String animation;
+
+  /// [frameRate] lottie animation framerate
+  final FrameRate animationFrameRate;
+
+  /// [repeat] should the lottie animation repeat?
+  final bool animationRepeat;
+
+  /// [animate] should the animation animate?
+  final bool animationAnimate;
+
+  /// [reverse] should the animation reverse?
+  final bool animationReverse;
 
   /// [titleStyle] dialog title text style
   final TextStyle titleStyle;
@@ -47,7 +63,15 @@ class DialogWidget extends StatelessWidget {
                 padding: EdgeInsets.only(top: 20),
                 height: 200,
                 width: double.infinity,
-                child: Lottie.asset(animation, fit: BoxFit.contain))
+                child: Lottie.asset(
+                  animation,
+                  animate: animationAnimate,
+                  frameRate: animationFrameRate,
+                  repeat: animationRepeat,
+                  reverse: animationReverse,
+                  fit: BoxFit.contain,
+                ),
+              )
             : SizedBox(
                 height: 0,
               ),
@@ -77,7 +101,7 @@ class DialogWidget extends StatelessWidget {
             ? buttons(context)
             : SizedBox(
                 height: 20,
-              )
+              ),
       ],
     );
   }
