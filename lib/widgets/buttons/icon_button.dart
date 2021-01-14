@@ -18,7 +18,7 @@ class IconsButton extends StatelessWidget {
         assert(text != null);
 
   /// [onPressed] Defines the button's click callback
-  final Function() onPressed;
+  final Function onPressed;
 
   /// [shape] Defines the button's shape
   final ShapeBorder shape;
