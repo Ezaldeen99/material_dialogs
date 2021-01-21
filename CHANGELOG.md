@@ -1,3 +1,11 @@
+## [0.1.0]
+- Adding animationFrameRate
+- Adding animationRepeat
+- Adding animationAnimate
+- Adding animationReverse
+
+
+
 ## [0.0.6+1]
 -allow custom padding on both IconsButton and OutlinedIconsButton
 
