@@ -1,3 +1,6 @@
+## [0.1.1]
+- Fixing some bugs
+
 ## [0.1.0]
 - Adding animationFrameRate
 - Adding animationRepeat
