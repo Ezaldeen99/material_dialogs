@@ -84,7 +84,7 @@ class DialogWidget extends StatelessWidget {
                 ),
               )
             : SizedBox(
-                height: 20,
+                height: 4,
               ),
         msg != null
             ? Padding(
