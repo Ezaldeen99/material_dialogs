@@ -108,7 +108,9 @@ class Dialogs {
         msg: msg,
         actions: actions,
         animation: animation,
-        animationFrameRate: FrameRate(animationFrameRate),
+        animationFrameRate: animationFrameRate != null
+            ? FrameRate(animationFrameRate)
+            : FrameRate.composition,
         animationRepeat: animationRepeat,
         animationAnimate: animationAnimate,
         animationReverse: animationReverse,

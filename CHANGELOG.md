@@ -1,3 +1,7 @@
+## [0.1.2]
+- Fixing bottom dialog null frame rate bug
+
+
 ## [0.1.1]
 - Fixing some bugs
 
