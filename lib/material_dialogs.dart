@@ -37,6 +37,7 @@ class Dialogs {
   /// [animationRepeat] should the animation repeat?
   /// [animationAnimate] should the animation animate?
   /// [animationReverse] should the animation be reversed?
+  /// [barrierDismissible] dismiss the dialog when click outside ?
 
   static Future<void> materialDialog({
     @required BuildContext context,
@@ -48,16 +49,17 @@ class Dialogs {
     bool animationRepeat,
     bool animationAnimate,
     bool animationReverse,
+    bool barrierDismissible = true,
     ShapeBorder dialogShape = dialogShape,
     TextStyle titleStyle = titleStyle,
     TextStyle msgStyle,
     Color color = bcgColor,
   }) async {
     assert(context != null);
-
     await showDialog<String>(
       context: context,
-      builder: (_) {
+      barrierDismissible: barrierDismissible,
+      builder: (context) {
         return Dialog(
           backgroundColor: color,
           shape: dialogShape,
@@ -92,6 +94,7 @@ class Dialogs {
     bool animationRepeat,
     bool animationAnimate,
     bool animationReverse,
+    bool barrierDismissible = true,
     ShapeBorder dialogShape = BottomSheetShape,
     TextStyle titleStyle = titleStyle,
     TextStyle msgStyle,
@@ -103,6 +106,7 @@ class Dialogs {
       context: context,
       shape: dialogShape,
       backgroundColor: color,
+      isDismissible: barrierDismissible,
       builder: (context) => DialogWidget(
         title: title,
         msg: msg,

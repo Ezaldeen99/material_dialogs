@@ -32,7 +32,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class TestPage extends StatelessWidget {
+class TestPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return TestState();
+  }
+}
+
+class TestState extends State<TestPage> {
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -60,7 +68,9 @@ class TestPage extends StatelessWidget {
           context: context,
           actions: [
             IconsOutlineButton(
-              onPressed: () {},
+              onPressed: () {
+
+              },
               text: 'Cancel',
               iconData: Icons.cancel_outlined,
               textStyle: TextStyle(color: Colors.grey),
@@ -68,7 +78,7 @@ class TestPage extends StatelessWidget {
             ),
             IconsButton(
               onPressed: () {},
-              text: 'Delete',
+              text: "Delete",
               iconData: Icons.delete,
               color: Colors.red,
               textStyle: TextStyle(color: Colors.white),
