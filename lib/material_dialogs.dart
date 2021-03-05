@@ -12,6 +12,11 @@ class Dialogs {
   ///[bcgColor] background default value
   static const Color bcgColor = const Color(0xfffefefe);
 
+  ///[holder] holder for the custom view
+  static const Widget holder = const SizedBox(
+    height: 0,
+  );
+
   /// [dialogShape] dialog outer shape
   static const ShapeBorder dialogShape = const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(16)));
@@ -44,6 +49,7 @@ class Dialogs {
     String title,
     String msg,
     List<Widget> actions,
+    Widget customView = holder,
     String animation,
     double animationFrameRate,
     bool animationRepeat,
@@ -56,6 +62,8 @@ class Dialogs {
     Color color = bcgColor,
   }) async {
     assert(context != null);
+    assert(customView != null);
+
     await showDialog<String>(
       context: context,
       barrierDismissible: barrierDismissible,
@@ -71,6 +79,7 @@ class Dialogs {
             animationFrameRate: animationFrameRate != null
                 ? FrameRate(animationFrameRate)
                 : FrameRate.composition,
+            customView: customView,
             animationRepeat: animationRepeat,
             animationAnimate: animationAnimate,
             animationReverse: animationReverse,
@@ -89,6 +98,7 @@ class Dialogs {
     String title,
     String msg,
     List<Widget> actions,
+    Widget customView = holder,
     String animation,
     double animationFrameRate,
     bool animationRepeat,
@@ -101,6 +111,7 @@ class Dialogs {
     Color color = bcgColor,
   }) {
     assert(context != null);
+    assert(customView != null);
 
     showModalBottomSheet(
       context: context,
@@ -115,6 +126,7 @@ class Dialogs {
         animationFrameRate: animationFrameRate != null
             ? FrameRate(animationFrameRate)
             : FrameRate.composition,
+        customView: customView,
         animationRepeat: animationRepeat,
         animationAnimate: animationAnimate,
         animationReverse: animationReverse,

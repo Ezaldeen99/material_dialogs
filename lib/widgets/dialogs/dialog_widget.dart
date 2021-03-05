@@ -14,6 +14,7 @@ class DialogWidget extends StatelessWidget {
     this.animationRepeat,
     this.animationAnimate,
     this.animationReverse,
+    this.customView,
     this.titleStyle,
     this.msgStyle,
     this.color,
@@ -21,6 +22,9 @@ class DialogWidget extends StatelessWidget {
 
   /// [actions]Widgets to display a row of buttons after the [msg] widget.
   final List<Widget> actions;
+
+  /// [customView] a widget to display a custom widget instead of the animation view.
+  final Widget customView;
 
   /// [title] your dialog title
   final String title;
@@ -75,6 +79,7 @@ class DialogWidget extends StatelessWidget {
             : SizedBox(
                 height: 0,
               ),
+        customView,
         title != null
             ? Padding(
                 padding: const EdgeInsets.only(right: 20, left: 20, top: 24.0),

@@ -24,9 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   # fonts
-  google_fonts: ^1.1.1
+  google_fonts: ^2.0.0
 # animations
-  lottie: ^0.7.0+1
+  lottie: ^1.0.0
   material_dialogs:
     path: ../
 

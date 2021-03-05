@@ -40,7 +40,6 @@ class TestPage extends StatefulWidget {
 }
 
 class TestState extends State<TestPage> {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -68,9 +67,7 @@ class TestState extends State<TestPage> {
           context: context,
           actions: [
             IconsOutlineButton(
-              onPressed: () {
-
-              },
+              onPressed: () {},
               text: 'Cancel',
               iconData: Icons.cancel_outlined,
               textStyle: TextStyle(color: Colors.grey),

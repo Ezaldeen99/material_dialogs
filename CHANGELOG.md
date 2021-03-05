@@ -1,3 +1,14 @@
+## [0.1.5]
+- Update dependencies
+
+## [0.1.4]
+- Adding Custom widget in case anyone needs to replace the animation 
+with a custom view 
+- Update dependencies
+
+## [0.1.3]
+- Adding barrier dismissible
+
 ## [0.1.2]
 - Fixing bottom dialog null frame rate bug
 
