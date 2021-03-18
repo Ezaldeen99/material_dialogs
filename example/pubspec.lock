@@ -63,7 +63,7 @@ packages:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -143,7 +143,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.1.4"
+    version: "0.1.5"
   meta:
     dependency: transitive
     description:
@@ -297,5 +297,5 @@ packages:
     source: hosted
     version: "0.2.0"
 sdks:
-  dart: ">=2.12.0-259.9.beta <3.0.0"
+  dart: ">=2.12.0 <3.0.0"
   flutter: ">=1.20.0"

@@ -45,25 +45,22 @@ class Dialogs {
   /// [barrierDismissible] dismiss the dialog when click outside ?
 
   static Future<void> materialDialog({
-    @required BuildContext context,
-    String title,
-    String msg,
-    List<Widget> actions,
+    required BuildContext context,
+    String? title,
+    String? msg,
+    List<Widget>? actions,
     Widget customView = holder,
-    String animation,
-    double animationFrameRate,
-    bool animationRepeat,
-    bool animationAnimate,
-    bool animationReverse,
+    String? animation,
+    double? animationFrameRate,
+    bool? animationRepeat,
+    bool? animationAnimate,
+    bool? animationReverse,
     bool barrierDismissible = true,
     ShapeBorder dialogShape = dialogShape,
     TextStyle titleStyle = titleStyle,
-    TextStyle msgStyle,
+    TextStyle? msgStyle,
     Color color = bcgColor,
   }) async {
-    assert(context != null);
-    assert(customView != null);
-
     await showDialog<String>(
       context: context,
       barrierDismissible: barrierDismissible,
@@ -94,25 +91,22 @@ class Dialogs {
 
   /// Displays bottom sheet Material dialog above the current contents of the app
   static void bottomMaterialDialog({
-    @required BuildContext context,
-    String title,
-    String msg,
-    List<Widget> actions,
+    required BuildContext context,
+    String? title,
+    String? msg,
+    List<Widget>? actions,
     Widget customView = holder,
-    String animation,
-    double animationFrameRate,
-    bool animationRepeat,
-    bool animationAnimate,
-    bool animationReverse,
+    String? animation,
+    double? animationFrameRate,
+    bool? animationRepeat,
+    bool? animationAnimate,
+    bool? animationReverse,
     bool barrierDismissible = true,
     ShapeBorder dialogShape = BottomSheetShape,
     TextStyle titleStyle = titleStyle,
-    TextStyle msgStyle,
+    TextStyle? msgStyle,
     Color color = bcgColor,
   }) {
-    assert(context != null);
-    assert(customView != null);
-
     showModalBottomSheet(
       context: context,
       shape: dialogShape,
