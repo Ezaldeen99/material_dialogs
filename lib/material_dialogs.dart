@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:material_dialogs/widgets/dialogs/dialog_widget.dart';
 
+export 'package:lottie/lottie.dart';
+
 class Dialogs {
   ///[titleStyle] can be used to change the dialog title style
   static const TextStyle titleStyle =
@@ -36,37 +38,35 @@ class Dialogs {
   /// [msgStyle] your dialog description style
 
   /// [actions] Widgets to display a row of buttons after the [msg] widget.
-
-  /// [animation] JSON Lottie animation file
-  /// [animationFrameRate] framerate of animation
-  /// [animationRepeat] should the animation repeat?
-  /// [animationAnimate] should the animation animate?
-  /// [animationReverse] should the animation be reversed?
-  /// [barrierDismissible] dismiss the dialog when click outside ?
+  /// [onClose] used to listen to dialog close events.
 
   static Future<void> materialDialog({
-    @required BuildContext context,
-    String title,
-    String msg,
-    List<Widget> actions,
+    required BuildContext context,
+    Function(dynamic value)? onClose,
+    String? title,
+    String? msg,
+    List<Widget>? actions,
     Widget customView = holder,
-    String animation,
-    double animationFrameRate,
-    bool animationRepeat,
-    bool animationAnimate,
-    bool animationReverse,
+    LottieBuilder? lottieBuilder,
     bool barrierDismissible = true,
+    Color? barrierColor = Colors.black54,
+    String? barrierLabel,
+    bool useSafeArea = true,
+    bool useRootNavigator = true,
+    RouteSettings? routeSettings,
     ShapeBorder dialogShape = dialogShape,
     TextStyle titleStyle = titleStyle,
-    TextStyle msgStyle,
+    TextStyle? msgStyle,
     Color color = bcgColor,
   }) async {
-    assert(context != null);
-    assert(customView != null);
-
     await showDialog<String>(
       context: context,
       barrierDismissible: barrierDismissible,
+      barrierColor: barrierColor,
+      barrierLabel: barrierLabel,
+      useSafeArea: useSafeArea,
+      useRootNavigator: useRootNavigator,
+      routeSettings: routeSettings,
       builder: (context) {
         return Dialog(
           backgroundColor: color,
@@ -75,65 +75,58 @@ class Dialogs {
             title: title,
             msg: msg,
             actions: actions,
-            animation: animation,
-            animationFrameRate: animationFrameRate != null
-                ? FrameRate(animationFrameRate)
-                : FrameRate.composition,
+            animationBuilder: lottieBuilder,
             customView: customView,
-            animationRepeat: animationRepeat,
-            animationAnimate: animationAnimate,
-            animationReverse: animationReverse,
             titleStyle: titleStyle,
             msgStyle: msgStyle,
             color: color,
           ),
         );
       },
-    );
+    ).then((value) => onClose?.call(value));
   }
 
   /// Displays bottom sheet Material dialog above the current contents of the app
   static void bottomMaterialDialog({
-    @required BuildContext context,
-    String title,
-    String msg,
-    List<Widget> actions,
+    required BuildContext context,
+    Function(dynamic value)? onClose,
+    String? title,
+    String? msg,
+    List<Widget>? actions,
     Widget customView = holder,
-    String animation,
-    double animationFrameRate,
-    bool animationRepeat,
-    bool animationAnimate,
-    bool animationReverse,
+    LottieBuilder? lottieBuilder,
     bool barrierDismissible = true,
     ShapeBorder dialogShape = BottomSheetShape,
     TextStyle titleStyle = titleStyle,
-    TextStyle msgStyle,
+    TextStyle? msgStyle,
     Color color = bcgColor,
+    bool isScrollControlled = false,
+    bool useRootNavigator = false,
+    bool isDismissible = true,
+    bool enableDrag = true,
+    RouteSettings? routeSettings,
+    AnimationController? transitionAnimationController,
   }) {
-    assert(context != null);
-    assert(customView != null);
-
     showModalBottomSheet(
       context: context,
       shape: dialogShape,
       backgroundColor: color,
-      isDismissible: barrierDismissible,
+      isScrollControlled: isScrollControlled,
+      useRootNavigator: useRootNavigator,
+      isDismissible: isDismissible,
+      enableDrag: enableDrag,
+      routeSettings: routeSettings,
+      transitionAnimationController: transitionAnimationController,
       builder: (context) => DialogWidget(
         title: title,
         msg: msg,
         actions: actions,
-        animation: animation,
-        animationFrameRate: animationFrameRate != null
-            ? FrameRate(animationFrameRate)
-            : FrameRate.composition,
+        animationBuilder: lottieBuilder,
         customView: customView,
-        animationRepeat: animationRepeat,
-        animationAnimate: animationAnimate,
-        animationReverse: animationReverse,
         titleStyle: titleStyle,
         msgStyle: msgStyle,
         color: color,
       ),
-    );
+    ).then((value) => onClose?.call(value));
   }
 }

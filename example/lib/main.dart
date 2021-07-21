@@ -67,7 +67,9 @@ class TestState extends State<TestPage> {
           context: context,
           actions: [
             IconsOutlineButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
               text: 'Cancel',
               iconData: Icons.cancel_outlined,
               textStyle: TextStyle(color: Colors.grey),
@@ -96,7 +98,9 @@ class TestState extends State<TestPage> {
           context: context,
           actions: [
             IconsOutlineButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
               text: 'Cancel',
               iconData: Icons.cancel_outlined,
               textStyle: TextStyle(color: Colors.grey),
@@ -123,11 +127,16 @@ class TestState extends State<TestPage> {
         color: Colors.white,
         msg: 'Congratulations, you won 500 points',
         title: 'Congratulations',
-        animation: 'assets/cong_example.json',
+        lottieBuilder: Lottie.asset(
+          'assets/cong_example.json',
+          fit: BoxFit.contain,
+        ),
         context: context,
         actions: [
           IconsButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             text: 'Claim',
             iconData: Icons.done,
             color: Colors.blue,
@@ -148,11 +157,16 @@ class TestState extends State<TestPage> {
         msg: 'Congratulations, you won 500 points',
         title: 'Congratulations',
         color: Colors.white,
-        animation: 'assets/cong_example.json',
+        lottieBuilder: Lottie.asset(
+          'assets/cong_example.json',
+          fit: BoxFit.contain,
+        ),
         context: context,
         actions: [
           IconsButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             text: 'Claim',
             iconData: Icons.done,
             color: Colors.blue,
