@@ -1,7 +1,6 @@
 # [Flutter Material Dialogs](https://pub.dev/packages/material_dialogs)
 
 [![pub](https://img.shields.io/pub/v/material_dialogs.svg)](https://pub.dev/packages/material_dialogs/install)
-[![codecov](https://codecov.io/gh/Sub6Resources/flutter_html/branch/master/graph/badge.svg)](https://codecov.io/gh/Ezaldeen99/material_dialogs)
 
 # Flutter Material Dialogs  📱
 
