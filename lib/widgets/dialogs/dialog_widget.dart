@@ -6,11 +6,12 @@ import 'package:lottie/lottie.dart';
 
 class DialogWidget extends StatelessWidget {
   DialogWidget({
+    Key? key,
     this.title,
     this.msg,
     this.actions,
     this.animationBuilder,
-    this.customView,
+    this.customView = const SizedBox(),
     this.titleStyle,
     this.msgStyle,
     this.color,
@@ -20,7 +21,7 @@ class DialogWidget extends StatelessWidget {
   final List<Widget>? actions;
 
   /// [customView] a widget to display a custom widget instead of the animation view.
-  final Widget? customView;
+  final Widget customView;
 
   /// [title] your dialog title
   final String? title;
@@ -53,6 +54,7 @@ class DialogWidget extends StatelessWidget {
             width: double.infinity,
             child: animationBuilder,
           ),
+        customView,
         title != null
             ? Padding(
                 padding: const EdgeInsets.only(right: 20, left: 20, top: 24.0),
