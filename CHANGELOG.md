@@ -1,4 +1,7 @@
-## [1.0.1]
+## [1.1.1]
+- fix bugs
+
+## [1.1.0]
 # Breakout changes:
 - remove `animation`, `frameRate`, `reverse` and replace it with `lottieBuilder` 
 # New features
