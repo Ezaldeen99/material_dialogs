@@ -14,6 +14,8 @@ class DialogWidget extends StatelessWidget {
     this.customView = const SizedBox(),
     this.titleStyle,
     this.msgStyle,
+    this.titleAlign,
+    this.msgAlign,
     this.color,
   });
 
@@ -38,6 +40,12 @@ class DialogWidget extends StatelessWidget {
   /// [animation] lottie animations path
   final TextStyle? msgStyle;
 
+  /// [titleAlign] dialog title text alignment
+  final TextAlign? titleAlign;
+
+  /// [textAlign] dialog description text alignment
+  final TextAlign? msgAlign;
+
   /// [color] dialog's backgorund color
   final Color? color;
 
@@ -61,6 +69,7 @@ class DialogWidget extends StatelessWidget {
                 child: Text(
                   title!,
                   style: titleStyle,
+                  textAlign: titleAlign,
                 ),
               )
             : SizedBox(
@@ -72,6 +81,7 @@ class DialogWidget extends StatelessWidget {
                 child: Text(
                   msg!,
                   style: msgStyle,
+                  textAlign: msgAlign,
                 ),
               )
             : SizedBox(
