@@ -1,6 +1,6 @@
 # [Flutter Material Dialogs](https://pub.dev/packages/material_dialogs)
 
-[![pub](https://img.shields.io/pub/v/material_dialogs.svg)](https://pub.dev/packages/material_dialogs/install)]
+[![pub](https://img.shields.io/pub/v/material_dialogs.svg)](https://pub.dev/packages/material_dialogs/install)
 
 # Flutter Material Dialogs  📱
 
