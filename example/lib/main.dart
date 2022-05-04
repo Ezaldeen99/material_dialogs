@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_dialogs/material_dialogs.dart';
@@ -65,10 +64,11 @@ class TestState extends State<TestPage> {
           title: "Delete",
           color: Colors.white,
           context: context,
+          onClose: (value) => print("returned value is '$value'"),
           actions: [
             IconsOutlineButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop(['Test', 'List']);
               },
               text: 'Cancel',
               iconData: Icons.cancel_outlined,
