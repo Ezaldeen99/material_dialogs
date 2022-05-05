@@ -63,7 +63,7 @@ class Dialogs {
     TextAlign? msgAlign,
     Color color = bcgColor,
   }) async {
-    await showDialog<String>(
+    await showDialog(
       context: context,
       barrierDismissible: barrierDismissible,
       barrierColor: barrierColor,
