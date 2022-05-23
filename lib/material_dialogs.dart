@@ -62,6 +62,7 @@ class Dialogs {
     TextAlign? titleAlign,
     TextAlign? msgAlign,
     Color color = bcgColor,
+    double? dialogWidth,
   }) async {
     await showDialog(
       context: context,
@@ -77,6 +78,7 @@ class Dialogs {
           shape: dialogShape,
           child: DialogWidget(
             title: title,
+            dialogWidth: dialogWidth,
             msg: msg,
             actions: actions,
             animationBuilder: lottieBuilder,

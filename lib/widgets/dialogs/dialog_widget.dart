@@ -16,6 +16,7 @@ class DialogWidget extends StatelessWidget {
     this.msgStyle,
     this.titleAlign,
     this.msgAlign,
+    this.dialogWidth,
     this.color,
   });
 
@@ -49,50 +50,60 @@ class DialogWidget extends StatelessWidget {
   /// [color] dialog's backgorund color
   final Color? color;
 
+  /// [dialogWidth] dialog's width compared to the screen width
+  final double? dialogWidth;
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        if (animationBuilder != null)
-          Container(
-            padding: EdgeInsets.only(top: 20),
-            height: 200,
-            width: double.infinity,
-            child: animationBuilder,
-          ),
-        customView,
-        title != null
-            ? Padding(
-                padding: const EdgeInsets.only(right: 20, left: 20, top: 24.0),
-                child: Text(
-                  title!,
-                  style: titleStyle,
-                  textAlign: titleAlign,
+    return Container(
+      width: dialogWidth == null
+          ? null
+          : MediaQuery.of(context).size.width * dialogWidth!,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (animationBuilder != null)
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              height: 200,
+              width: double.infinity,
+              child: animationBuilder,
+            ),
+          customView,
+          title != null
+              ? Padding(
+                  padding:
+                      const EdgeInsets.only(right: 20, left: 20, top: 24.0),
+                  child: Text(
+                    title!,
+                    style: titleStyle,
+                    textAlign: titleAlign,
+                  ),
+                )
+              : SizedBox(
+                  height: 4,
                 ),
-              )
-            : SizedBox(
-                height: 4,
-              ),
-        msg != null
-            ? Padding(
-                padding: const EdgeInsets.only(right: 20, left: 20, top: 16.0),
-                child: Text(
-                  msg!,
-                  style: msgStyle,
-                  textAlign: msgAlign,
+          msg != null
+              ? Padding(
+                  padding:
+                      const EdgeInsets.only(right: 20, left: 20, top: 16.0),
+                  child: Text(
+                    msg!,
+                    style: msgStyle,
+                    textAlign: msgAlign,
+                  ),
+                )
+              : SizedBox(
+                  height: 20,
                 ),
-              )
-            : SizedBox(
-                height: 20,
-              ),
-        actions?.isNotEmpty == true
-            ? buttons(context)
-            : SizedBox(
-                height: 20,
-              ),
-      ],
+          actions?.isNotEmpty == true
+              ? buttons(context)
+              : SizedBox(
+                  height: 20,
+                ),
+        ],
+      ),
     );
   }
 
