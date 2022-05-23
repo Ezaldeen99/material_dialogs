@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_dialogs/material_dialogs.dart';
@@ -64,6 +65,7 @@ class TestState extends State<TestPage> {
           title: "Delete",
           color: Colors.white,
           context: context,
+          dialogWidth: kIsWeb ? 0.3 : null,
           onClose: (value) => print("returned value is '$value'"),
           actions: [
             IconsOutlineButton(
@@ -131,6 +133,7 @@ class TestState extends State<TestPage> {
           'assets/cong_example.json',
           fit: BoxFit.contain,
         ),
+        dialogWidth: kIsWeb ? 0.3 : null,
         context: context,
         actions: [
           IconsButton(
