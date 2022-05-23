@@ -1,3 +1,6 @@
+## [1.1.2]
+- adding `dialogWidth` in order to support flexible dialogue width
+
 ## [1.1.1]
 - fix bugs
 
