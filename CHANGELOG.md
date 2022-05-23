@@ -1,5 +1,9 @@
-## [1.1.2]
+## [1.1.3]
 - adding `dialogWidth` in order to support flexible dialogue width
+
+## [1.1.2]
+- allow returning values in on close
+- update dependencies
 
 ## [1.1.1]
 - fix bugs
