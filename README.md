@@ -163,7 +163,10 @@ Dialogs.materialDialog(
           color: Colors.white,
           msg: 'Congratulations, you won 500 points',
           title: 'Congratulations',
-          animation: 'assets/cong_example.json',
+          lottieBuilder: Lottie.asset(
+          'assets/cong_example.json',
+          fit: BoxFit.contain,
+          ),
           context: context,
           actions: [
             IconsButton(
