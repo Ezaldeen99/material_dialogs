@@ -42,6 +42,7 @@ class Dialogs {
   /// [msg] your dialog description message
   /// [msgStyle] your dialog description style
   /// [msgAlign] your dialog description alignment
+  /// [customView] a custom view shown in the dialog at [customViewPosition] and by default before the title
 
   /// [actions] Widgets to display a row of buttons after the [msg] widget.
   /// [onClose] used to listen to dialog close events.
@@ -88,6 +89,7 @@ class Dialogs {
             actions: actions,
             animationBuilder: lottieBuilder,
             customView: customView,
+            customViewPosition: customViewPosition,
             titleStyle: titleStyle,
             msgStyle: msgStyle,
             titleAlign: titleAlign,
@@ -107,6 +109,7 @@ class Dialogs {
     String? msg,
     List<Widget>? actions,
     Widget customView = holder,
+    CustomViewPosition customViewPosition = CustomViewPosition.BEFORE_TITLE,
     LottieBuilder? lottieBuilder,
     bool barrierDismissible = true,
     ShapeBorder dialogShape = BottomSheetShape,
@@ -136,6 +139,7 @@ class Dialogs {
         actions: actions,
         animationBuilder: lottieBuilder,
         customView: customView,
+        customViewPosition: customViewPosition,
         titleStyle: titleStyle,
         msgStyle: msgStyle,
         color: color,
