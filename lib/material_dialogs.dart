@@ -2,6 +2,7 @@ library material_dialogs;
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:material_dialogs/shared/types.dart';
 import 'package:material_dialogs/widgets/dialogs/dialog_widget.dart';
 
 export 'package:lottie/lottie.dart';
@@ -28,6 +29,9 @@ class Dialogs {
       borderRadius: BorderRadius.only(
           topLeft: Radius.circular(16), topRight: Radius.circular(16)));
 
+  static const CustomViewPosition customViewPosition =
+      CustomViewPosition.BEFORE_TITLE;
+
   /// Displays normal Material dialog above the current contents of the app
   /// [context] your parent widget context
   /// [color] dialog background color
@@ -49,6 +53,7 @@ class Dialogs {
     String? msg,
     List<Widget>? actions,
     Widget customView = holder,
+    CustomViewPosition customViewPosition = CustomViewPosition.BEFORE_TITLE,
     LottieBuilder? lottieBuilder,
     bool barrierDismissible = true,
     Color? barrierColor = Colors.black54,
