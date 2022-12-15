@@ -2,6 +2,7 @@ library material_dialogs;
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:material_dialogs/shared/types.dart';
 import 'package:material_dialogs/widgets/dialogs/dialog_widget.dart';
 
 export 'package:lottie/lottie.dart';
@@ -28,6 +29,9 @@ class Dialogs {
       borderRadius: BorderRadius.only(
           topLeft: Radius.circular(16), topRight: Radius.circular(16)));
 
+  static const CustomViewPosition customViewPosition =
+      CustomViewPosition.BEFORE_TITLE;
+
   /// Displays normal Material dialog above the current contents of the app
   /// [context] your parent widget context
   /// [color] dialog background color
@@ -38,6 +42,7 @@ class Dialogs {
   /// [msg] your dialog description message
   /// [msgStyle] your dialog description style
   /// [msgAlign] your dialog description alignment
+  /// [customView] a custom view shown in the dialog at [customViewPosition] and by default before the title
 
   /// [actions] Widgets to display a row of buttons after the [msg] widget.
   /// [onClose] used to listen to dialog close events.
@@ -49,6 +54,7 @@ class Dialogs {
     String? msg,
     List<Widget>? actions,
     Widget customView = holder,
+    CustomViewPosition customViewPosition = CustomViewPosition.BEFORE_TITLE,
     LottieBuilder? lottieBuilder,
     bool barrierDismissible = true,
     Color? barrierColor = Colors.black54,
@@ -83,6 +89,7 @@ class Dialogs {
             actions: actions,
             animationBuilder: lottieBuilder,
             customView: customView,
+            customViewPosition: customViewPosition,
             titleStyle: titleStyle,
             msgStyle: msgStyle,
             titleAlign: titleAlign,
@@ -102,6 +109,7 @@ class Dialogs {
     String? msg,
     List<Widget>? actions,
     Widget customView = holder,
+    CustomViewPosition customViewPosition = CustomViewPosition.BEFORE_TITLE,
     LottieBuilder? lottieBuilder,
     bool barrierDismissible = true,
     ShapeBorder dialogShape = BottomSheetShape,
@@ -131,6 +139,7 @@ class Dialogs {
         actions: actions,
         animationBuilder: lottieBuilder,
         customView: customView,
+        customViewPosition: customViewPosition,
         titleStyle: titleStyle,
         msgStyle: msgStyle,
         color: color,

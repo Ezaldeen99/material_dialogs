@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:material_dialogs/shared/types.dart';
 
 /// Displays Material dialog above the current contents of the app
 
@@ -12,6 +13,7 @@ class DialogWidget extends StatelessWidget {
     this.actions,
     this.animationBuilder,
     this.customView = const SizedBox(),
+    this.customViewPosition = CustomViewPosition.BEFORE_TITLE,
     this.titleStyle,
     this.msgStyle,
     this.titleAlign,
@@ -25,6 +27,8 @@ class DialogWidget extends StatelessWidget {
 
   /// [customView] a widget to display a custom widget instead of the animation view.
   final Widget customView;
+
+  final CustomViewPosition customViewPosition;
 
   /// [title] your dialog title
   final String? title;
@@ -63,6 +67,9 @@ class DialogWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
+          customViewPosition == CustomViewPosition.BEFORE_ANIMATION
+              ? customView
+              : const SizedBox(),
           if (animationBuilder != null)
             Container(
               padding: EdgeInsets.only(top: 20),
@@ -70,7 +77,9 @@ class DialogWidget extends StatelessWidget {
               width: double.infinity,
               child: animationBuilder,
             ),
-          customView,
+          customViewPosition == CustomViewPosition.BEFORE_TITLE
+              ? customView
+              : const SizedBox(),
           title != null
               ? Padding(
                   padding:
@@ -84,6 +93,9 @@ class DialogWidget extends StatelessWidget {
               : SizedBox(
                   height: 4,
                 ),
+          customViewPosition == CustomViewPosition.BEFORE_MESSAGE
+              ? customView
+              : const SizedBox(),
           msg != null
               ? Padding(
                   padding:
@@ -97,11 +109,17 @@ class DialogWidget extends StatelessWidget {
               : SizedBox(
                   height: 20,
                 ),
+          customViewPosition == CustomViewPosition.BEFORE_ACTION
+              ? customView
+              : const SizedBox(),
           actions?.isNotEmpty == true
               ? buttons(context)
               : SizedBox(
                   height: 20,
                 ),
+          customViewPosition == CustomViewPosition.AFTER_ACTION
+              ? customView
+              : const SizedBox(),
         ],
       ),
     );
