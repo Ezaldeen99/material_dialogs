@@ -4,6 +4,9 @@
 
 # Flutter Material Dialogs 📱
 
+- customized material_dialogs 1.1.4
+* add landscape view
+
 A Flutter library aims to help you create 💪🏻*animated*, 😃 _simple_, 😎 _stylish_ Material Dialogs in your app.
 
 <table style="width:100%">

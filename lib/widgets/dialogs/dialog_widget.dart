@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -8,10 +10,12 @@ import 'package:material_dialogs/shared/types.dart';
 class DialogWidget extends StatelessWidget {
   DialogWidget({
     Key? key,
+    this.isLandscape = false,
     this.title,
     this.msg,
     this.actions,
     this.animationBuilder,
+    this.animHeight = 200,
     this.customView = const SizedBox(),
     this.customViewPosition = CustomViewPosition.BEFORE_TITLE,
     this.titleStyle,
@@ -21,6 +25,12 @@ class DialogWidget extends StatelessWidget {
     this.dialogWidth,
     this.color,
   });
+
+  /// SP : [isLandscape] show landscape view mode
+  final bool isLandscape;
+
+  /// SP : [animHeight] anim height control
+  final double animHeight;
 
   /// [actions]Widgets to display a row of buttons after the [msg] widget.
   final List<Widget>? actions;
@@ -63,66 +73,74 @@ class DialogWidget extends StatelessWidget {
       width: dialogWidth == null
           ? null
           : MediaQuery.of(context).size.width * dialogWidth!,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          customViewPosition == CustomViewPosition.BEFORE_ANIMATION
-              ? customView
-              : const SizedBox(),
-          if (animationBuilder != null)
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              height: 200,
-              width: double.infinity,
-              child: animationBuilder,
+      child: isLandscape
+          ? Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: viewChildren(context),
+            )
+          : Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: viewChildren(context),
             ),
-          customViewPosition == CustomViewPosition.BEFORE_TITLE
-              ? customView
-              : const SizedBox(),
-          title != null
-              ? Padding(
-                  padding:
-                      const EdgeInsets.only(right: 20, left: 20, top: 24.0),
-                  child: Text(
-                    title!,
-                    style: titleStyle,
-                    textAlign: titleAlign,
-                  ),
-                )
-              : SizedBox(
-                  height: 4,
-                ),
-          customViewPosition == CustomViewPosition.BEFORE_MESSAGE
-              ? customView
-              : const SizedBox(),
-          msg != null
-              ? Padding(
-                  padding:
-                      const EdgeInsets.only(right: 20, left: 20, top: 16.0),
-                  child: Text(
-                    msg!,
-                    style: msgStyle,
-                    textAlign: msgAlign,
-                  ),
-                )
-              : SizedBox(
-                  height: 20,
-                ),
-          customViewPosition == CustomViewPosition.BEFORE_ACTION
-              ? customView
-              : const SizedBox(),
-          actions?.isNotEmpty == true
-              ? buttons(context)
-              : SizedBox(
-                  height: 20,
-                ),
-          customViewPosition == CustomViewPosition.AFTER_ACTION
-              ? customView
-              : const SizedBox(),
-        ],
-      ),
     );
+  }
+
+  viewChildren(context) {
+    return [
+      customViewPosition == CustomViewPosition.BEFORE_ANIMATION
+          ? customView
+          : const SizedBox(),
+      if (animationBuilder != null)
+        Container(
+          padding: EdgeInsets.only(top: 20),
+          height: animHeight,
+          width: double.infinity,
+          child: animationBuilder,
+        ),
+      customViewPosition == CustomViewPosition.BEFORE_TITLE
+          ? customView
+          : const SizedBox(),
+      title != null
+          ? Padding(
+              padding: const EdgeInsets.only(right: 20, left: 20, top: 24.0),
+              child: Text(
+                title!,
+                style: titleStyle,
+                textAlign: titleAlign,
+              ),
+            )
+          : SizedBox(
+              height: 4,
+            ),
+      customViewPosition == CustomViewPosition.BEFORE_MESSAGE
+          ? customView
+          : const SizedBox(),
+      msg != null
+          ? Padding(
+              padding: const EdgeInsets.only(right: 20, left: 20, top: 16.0),
+              child: Text(
+                msg!,
+                style: msgStyle,
+                textAlign: msgAlign,
+              ),
+            )
+          : SizedBox(
+              height: 20,
+            ),
+      customViewPosition == CustomViewPosition.BEFORE_ACTION
+          ? customView
+          : const SizedBox(),
+      actions?.isNotEmpty == true
+          ? buttons(context)
+          : SizedBox(
+              height: 20,
+            ),
+      customViewPosition == CustomViewPosition.AFTER_ACTION
+          ? customView
+          : const SizedBox(),
+    ];
   }
 
   Widget buttons(BuildContext context) {
