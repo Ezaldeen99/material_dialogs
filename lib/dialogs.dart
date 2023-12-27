@@ -104,7 +104,8 @@ class Dialogs {
     Function(dynamic value)? onClose,
     String? title,
     String? msg,
-    List<Widget>? actions,
+    @Deprecated('The actions is Deprecated, please use actionsBuilder') List<Widget>? actions,
+    Function(BuildContext context)? actionsBuilder,
     Widget customView = holder,
     CustomViewPosition customViewPosition = CustomViewPosition.BEFORE_TITLE,
     LottieBuilder? lottieBuilder,
@@ -133,7 +134,7 @@ class Dialogs {
       builder: (context) => DialogWidget(
         title: title,
         msg: msg,
-        actions: actions,
+        actions: actionsBuilder != null ? actionsBuilder(context) : actions,
         animationBuilder: lottieBuilder,
         customView: customView,
         customViewPosition: customViewPosition,
