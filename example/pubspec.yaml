@@ -25,7 +25,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.1.0
-  lottie: ^3.1.0
+  lottie: ^3.1.2
   material_dialogs:
     path: ../
 
